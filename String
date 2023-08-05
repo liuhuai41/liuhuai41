@@ -1,0 +1,5 @@
+List<String> words = Arrays.asList("Hello", "World");
+        List<String> flatMappedList = words.stream()
+                .flatMap(word -> Arrays.stream(word.split("")))
+                .collect(Collectors.toList());
+        System.out.println("FlatMapped List: " + flatMappedList);
