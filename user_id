@@ -1,0 +1,5 @@
+user_id = "test123"
+password = "password"
+
+con.execute('insert into Login values(%s, %s)' % \
+             (user_id, password))
