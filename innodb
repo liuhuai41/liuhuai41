@@ -1,0 +1,10 @@
+create table parent (
+id int not null,
+primary key(id)
+) engine=innodb;
+create table child (
+id int,
+parent_id int,
+foreign key(parent_id) references parent(id)
+ON DELETE CASCADE ON UPDATE CASCADE
+) engine=innodb;
