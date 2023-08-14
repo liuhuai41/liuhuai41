@@ -1,0 +1,16 @@
+ class_name in class_names:
+        current_class_data_path = os.path.join(src_data_folder, class_name)
+        current_all_data = os.listdir(current_class_data_path)
+        current_data_length = len(current_all_data)
+        current_data_index_list = list(range(current_data_length))
+        random.shuffle(current_data_index_list)
+ 
+        train_folder = os.path.join(os.path.join(target_data_folder, 'train'), class_name)
+        val_folder = os.path.join(os.path.join(target_data_folder, 'val'), class_name)
+        test_folder = os.path.join(os.path.join(target_data_folder, 'test'), class_name)
+        train_stop_flag = current_data_length * train_scale
+        val_stop_flag = current_data_length * (train_scale + val_scale)
+        current_idx = 0
+        train_num = 0
+        val_num = 0
+        test_num = 0
