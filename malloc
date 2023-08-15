@@ -1,0 +1,25 @@
+void inorder(struct TreeNode* root, int a, int pi)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    inorder(root->left, a, pi);
+    a[*pi] = root->val;
+    (*pi)++;
+    inorder(root->right, a, pi);
+}
+ 
+int inorderTraversal(struct TreeNode root, int returnSize)
+{
+    int size = BinaryTreeSize(root);
+    returnSize = size;
+    int a = (int)malloc(sizeof(int) * size);
+    if (a == NULL)
+    {
+        printf("malloc fail\n");
+        exit(-1);
+    }
+    int i = 0;
+    inorder(root, a, &i);
+    r
