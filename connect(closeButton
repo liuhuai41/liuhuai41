@@ -1,0 +1,27 @@
+closeButton = new QPushButton(tr("close")); 
+    closeButton->setParent(this);
+    closeButton->setFixedSize(100, 30); 
+    closeButton->move(980, 0);
+    closeButton->setStyleSheet("QPushButton { background-color : white;"\
+        "color : blue;"\
+        "border-radius : 2px;"\
+        "border : 2px solid green;"\
+        "font : 15px;}");
+    connect(closeButton,
+        &QPushButton::clicked,
+        this,
+        &Finddialog::close);
+
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+ 
+    cout<<"
+          "C"\
+          "C"\
+          "<<endl; 
+ 
+}
